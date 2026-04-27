@@ -1,0 +1,27 @@
+
+{% extends "base.html" %}
+
+{% block title %}Feedback Page{% endblock %}
+
+{% block content %}
+
+<h2>Feedback Form</h2>
+
+<form method="POST">
+    <input type="text" name="name" placeholder="Enter your name"><br><br>
+    <input type="text" name="message" placeholder="Enter your message"><br><br>
+    <input type="text" name="email" placeholder="Enter your email"><br><br>
+
+    <button type="submit">Submit</button>
+</form>
+
+<hr>
+
+<h3>All Feedbacks:</h3>
+<ul>
+    {% for name, message ,email in feedbacks %}
+        <li><b>{{ name }}: </b>{{ message }} <b>{{ email }} :</b></li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
