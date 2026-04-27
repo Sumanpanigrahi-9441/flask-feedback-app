@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}My App{% endblock %}</title>
+    <style>
+        body {
+            background-color: goldenrod;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-align: center;
+        }
+        h1 {
+            background-color: blue;
+            color: yellow;
+        }
+        feedback {
+            background-color: green;
+            color: red;
+        }
+        p {
+            background-color: brown;
+            color: black;
+
+        }
+    </style>
+</head>  
+<body>
+
+<h1>My Website</h1>
+<hr>
+
+{% block content %}
+{% endblock %}
+
+<hr>
+<p>© 2026 My Project</p>
+
+</body>
+</html>
